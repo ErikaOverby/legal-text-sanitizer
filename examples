@@ -1,0 +1,12 @@
+input_sample.txt → (unsanitized legal text)
+
+John Doe, a plaintiff, is filing a lawsuit. His email is johndoe@example.com and his phone number is 555-123-4567.
+Jane Smith, the defendant, can be reached at janesmith@example.com, phone 555-765-4321.
+The court date for the trial is set for March 3, 2023. The hearing will take place at 123 Court St, New York, NY 10001.
+Acme Law Firm, representing the defendant, can be reached at 555-111-2222.
+
+output_sample.txt → (sanitized version)
+[REDACTED_NAME], a [REDACTED_LEGAL_TERM], is filing a lawsuit. His email is [REDACTED_EMAIL] and his phone number is [REDACTED_PHONE].
+[REDACTED_NAME], the [REDACTED_LEGAL_TERM], can be reached at [REDACTED_EMAIL], phone [REDACTED_PHONE].
+The [REDACTED_LEGAL_TERM] date for the trial is set for [REDACTED_DATE]. The hearing will take place at [REDACTED_ADDRESS].
+[REDACTED_COMPANY], representing the [REDACTED_LEGAL_TERM], can be reached at [REDACTED_PHONE].
