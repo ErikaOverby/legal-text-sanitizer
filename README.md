@@ -27,22 +27,40 @@ To run the script and sanitize an example legal text:
 ### Example Output  
 #### Original Text:  
 
+John Doe, a plaintiff, is filing a lawsuit. His email is johndoe@example.com and his phone number is 555-123-4567.  
+Jane Smith, the defendant, can be reached at janesmith@example.com, phone 555-765-4321.  
+The court date for the trial is set for March 3, 2023. The hearing will take place at 123 Court St, New York, NY 10001.  
+Acme Law Firm, representing the defendant, can be reached at 555-111-2222.
+
+#### Sanitized Text:  
+
+[REDACTED_NAME], a [REDACTED_LEGAL_TERM], is filing a lawsuit. His email is [REDACTED_EMAIL] and his phone number is [REDACTED_PHONE].  
+[REDACTED_NAME], the [REDACTED_LEGAL_TERM], can be reached at [REDACTED_EMAIL], phone [REDACTED_PHONE].  
+The court date for the trial is set for [REDACTED_DATE]. The hearing will take place at [REDACTED_ADDRESS].  
+[REDACTED_COMPANY], representing the defendant, can be reached at [REDACTED_PHONE].
+
+## 📁 Examples
+
+The `examples/` folder contains a sample input and the corresponding sanitized output. These demonstrate how the script redacts sensitive legal information.
+
+### 📥 Input (`examples/input_sample.txt`)
 John Doe, a plaintiff, is filing a lawsuit. His email is johndoe@example.com and his phone number is 555-123-4567.
 Jane Smith, the defendant, can be reached at janesmith@example.com, phone 555-765-4321.
 The court date for the trial is set for March 3, 2023. The hearing will take place at 123 Court St, New York, NY 10001.
 Acme Law Firm, representing the defendant, can be reached at 555-111-2222.
 
-#### Sanitized Text:  
-
+### 📤 Output (`examples/output_sample.txt`)
 [REDACTED_NAME], a [REDACTED_LEGAL_TERM], is filing a lawsuit. His email is [REDACTED_EMAIL] and his phone number is [REDACTED_PHONE].
 [REDACTED_NAME], the [REDACTED_LEGAL_TERM], can be reached at [REDACTED_EMAIL], phone [REDACTED_PHONE].
-The court date for the trial is set for [REDACTED_DATE]. The hearing will take place at [REDACTED_ADDRESS].
-[REDACTED_COMPANY], representing the defendant, can be reached at [REDACTED_PHONE].
+The [REDACTED_LEGAL_TERM] date for the trial is set for [REDACTED_DATE]. The hearing will take place at [REDACTED_ADDRESS].
+[REDACTED_COMPANY], representing the [REDACTED_LEGAL_TERM], can be reached at [REDACTED_PHONE].
 
+## 📦 Requirements
 
-## Requirements  
-- Python 3.x or higher  
-- No external dependencies are required (uses the built-in `re` library for regular expressions).  
+- Python 3.6 or higher  
+- No external libraries are required (uses Python’s built-in `re` module)  
+
+> You can run this script using any standard Python 3 environment such as PyCharm, VS Code, or a terminal.
 
 ## License  
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
@@ -54,5 +72,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests for 
 - Extend name redaction to include first and last names only.  
 - Add support for more complex legal terms and jargon.  
 - Include a web interface or API for document sanitization.
+
+
 
 
