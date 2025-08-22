@@ -69,8 +69,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Contributions are welcome! Feel free to open issues or submit pull requests for improvements, bug fixes, or additional features.  
 
 ## Future Improvements  
-- Extend name redaction to include first and last names only.  
-- Add support for more complex legal terms and jargon.  
+ - Extend tool to cover HIPAA compliance by removing the 18 identifiers specified by the HIPAA Privacy Rule  
 - Include a web interface or API for document sanitization.
 
 
