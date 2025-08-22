@@ -1,2 +1,4 @@
 # requirements.txt
-# Currently no third-party libraries required
+# No third-party libraries required for this project
+# Pure Python with built-in libraries only
+
