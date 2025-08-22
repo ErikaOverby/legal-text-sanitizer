@@ -1,7 +1,7 @@
 # Legal Text Sanitizer (Redaction) 
 
 ## Description  
-The **Legal Text Sanitizer** is a Python-based tool designed to help sanitize sensitive data in legal documents via redaction.It utilizes regular expressions to replace personal and confidential information such as names, email addresses, phone numbers, dates, legal terms, and addresses with placeholders. This tool ensures privacy compliance by anonymizing sensitive information while maintaining the original structure of the document. It is ideal for legal professionals and others handling confidential documents.  
+The **Legal Text Sanitizer** is a Python-based tool designed to help sanitize sensitive data in legal documents via redaction. It utilizes regular expressions to replace personal and confidential information such as names, email addresses, phone numbers, dates, legal terms, and addresses with placeholders. This tool ensures privacy compliance by anonymizing sensitive information while maintaining the original structure of the document. It is ideal for legal professionals and others handling confidential documents.  
 
 ### Key Features:  
 - **Name Redaction**: Identifies and replaces both individual and company names with the placeholder `[REDACTED_NAME]` or `[REDACTED_COMPANY]`.  
